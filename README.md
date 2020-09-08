@@ -1,7 +1,7 @@
 # ESG-BERT
 Domain Specific BERT Model for Text Mining in Sustainable Investing
 
-The further pre-trained ESG-BERT model can be found here at this GitHub repository. It is PyTorch model but it can be converted into a Tensorflow model. They can be fine-tuned using either framework. I found the PyTorch framework to be a lot cleaner, and easier to replicate with other models. However, serving the final fine-tuned model is a lot easier on TensorFlow, than on PyTorch. 
+The further pre-trained ESG-BERT model can be found here at this GitHub repository. It is a PyTorch model but it can be converted into a Tensorflow model. They can be fine-tuned using either framework. I found the PyTorch framework to be a lot cleaner, and easier to replicate with other models. However, serving the final fine-tuned model is a lot easier on TensorFlow, than on PyTorch. 
 
 For fine-tuning the model, you can use this command to load it into PyTorch. 
 ```
