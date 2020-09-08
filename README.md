@@ -22,7 +22,7 @@ TorchServe is a model serving architecture for PyTorch models, go ahead and inst
 pip install torchserve torch-model-archiver
 
 ```
-Next up, we'll set up the handler script. It is a basic handler for text classification that can be improved upon. Save this script as "handler.py" in your directory. [6]
+Next up, we'll set up the handler script. It is a basic handler for text classification that can be improved upon. Save this script as "handler.py" in your directory. [1]
 ```
 from abc import ABC
 import json
@@ -154,3 +154,10 @@ __label__Ecological_Impacts :  23
 __label__Energy_Management :  24
 __label__GHG_Emissions :  25
 ```
+References:
+[1] - ---
+
+ https://medium.com/analytics-vidhya/deploy-huggingface-s-bert-to-production-with-pytorch-serve-27b068026d18
+
+
+---
