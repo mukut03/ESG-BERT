@@ -22,7 +22,7 @@ JDK 11 is needed to serve the model. Go ahead and install it from the Oracle dow
 TorchServe is a model serving architecture for PyTorch models, go ahead and install that using pip. You can also use conda for the installation. We also need pytorch and transformers installed. 
 ```
 pip install torchserve torch-model-archiver
-pip install torch 
+pip install torchvision 
 pip install transformers
 ```
 Next up, we'll set up the handler script. It is a basic handler for text classification that can be improved upon. Save this script as "handler.py" in your directory. [1]
