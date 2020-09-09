@@ -19,10 +19,11 @@ model.to(device)
 The fine-tuned model for text classification is also available [here](https://drive.google.com/drive/folders/1Qz4HP3xkjLfJ6DGCFNeJ7GmcPq65_HVe?usp=sharing). It can be used directly to make predictions using just a few steps. 
 First, download the fine-tuned pytorch_model.bin, config.json, and vocab.txt into your local directory. Make sure to place all of them into the same directory, mine is called "bert_model". 
 JDK 11 is needed to serve the model. Go ahead and install it from the Oracle downloads page. Now we are ready to set up TorcheServe.
-TorchServe is a model serving architecture for PyTorch models, go ahead and install that using pip. You can also use conda for the installation. 
+TorchServe is a model serving architecture for PyTorch models, go ahead and install that using pip. You can also use conda for the installation. We also need pytorch and transformers installed. 
 ```
 pip install torchserve torch-model-archiver
-
+pip install torch 
+pip install transformers
 ```
 Next up, we'll set up the handler script. It is a basic handler for text classification that can be improved upon. Save this script as "handler.py" in your directory. [1]
 ```
