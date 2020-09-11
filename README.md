@@ -1,5 +1,6 @@
 # ESG-BERT
 **Domain Specific BERT Model for Text Mining in Sustainable Investing** 
+
 Read more about this pre-trained model [here.](https://towardsdatascience.com/nlp-meets-sustainable-investing-d0542b3c264b?source=friends_link&sk=1f7e6641c3378aaff319a81decf387bf)
 
 **In collaboration with [Charan Pothireddi](https://www.linkedin.com/in/sree-charan-pothireddi-6a0a3587/) and [Parabole.ai](https://www.linkedin.com/in/sree-charan-pothireddi-6a0a3587/)**
