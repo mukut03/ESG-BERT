@@ -113,16 +113,17 @@ data = _service.preprocess(data)
 return data
     except Exception as e:
         raise e
+```
+Create a new model directory:
+``` bash
+mkdir model_store
+```
+TorcheServe uses a format called `MAR` (Model Archive). We can convert our PyTorch model to a `.mar` file using this command:
+``` bash
+torch-model-archiver --model-name "bert" --version 1.0 --serialized-file ./bert_model/pytorch_model.bin --extra-files "./bert_model/config.json,./bert_model/vocab.txt,./bert_model/index_to_name.json" --handler "./handler.py" --export-path "model_store/"
+```
+The resulting mar file will be stored in the `model_store` directory we just created.
 
-```
-TorcheServe uses a format called MAR (Model Archive). We can convert our PyTorch model to a .mar file using this command:
-```
-torch-model-archiver --model-name "bert" --version 1.0 --serialized-file ./bert_model/pytorch_model.bin --extra-files "./bert_model/config.json,./bert_model/vocab.txt" --handler "./handler.py" 
-```
-Move the .mar file into a new directory: 
-```
-mkdir model_store && mv bert.mar model_store 
-```
 Finally, we can start TorchServe using the command: 
 ```
 torchserve --start --model-store model_store --models bert=bert.mar
