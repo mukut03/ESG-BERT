@@ -5,7 +5,7 @@ Read more about this pre-trained model [here.](https://towardsdatascience.com/nl
 
 **In collaboration with [Charan Pothireddi](https://www.linkedin.com/in/sree-charan-pothireddi-6a0a3587/) and [Parabole.ai](https://www.linkedin.com/in/sree-charan-pothireddi-6a0a3587/)**
 
-The further pre-trained ESG-BERT model can be found [here](https://drive.google.com/drive/folders/1yfNpMvByz3fJMsOqir3SerS6PwsRS2rt?usp=sharing) at this GitHub repository. It is a PyTorch model but it can be converted into a Tensorflow model. They can be fine-tuned using either framework. I found the PyTorch framework to be a lot cleaner, and easier to replicate with other models. However, serving the final fine-tuned model is a lot easier on TensorFlow, than on PyTorch. 
+The further pre-trained ESG-BERT model can be found [here](https://huggingface.co/nbroad/ESG-BERT). It is a PyTorch model but it can be converted into a Tensorflow model. They can be fine-tuned using either framework. I found the PyTorch framework to be a lot cleaner, and easier to replicate with other models. However, serving the final fine-tuned model is a lot easier on TensorFlow, than on PyTorch. 
 
 You can download the ESG-BERT model (named pytorch_model.bin) along with config.json and vovab.txt fles here. BERT base model was further pre-trained on Sustainable Investing text corpus, resulting in a domain specific model. You need the all of those 3 files for fine-tuning.  
 
@@ -20,7 +20,7 @@ model = BertForSequenceClassification.from_pretrained(
 model.to(device)
 
 ```
-The fine-tuned model for text classification is also available [here](https://drive.google.com/drive/folders/1Qz4HP3xkjLfJ6DGCFNeJ7GmcPq65_HVe?usp=sharing). It can be used directly to make predictions using just a few steps. 
+The fine-tuned model for text classification is also available [here](https://huggingface.co/nbroad/ESG-BERT). It can be used directly to make predictions using just a few steps. 
 First, download the fine-tuned pytorch_model.bin, config.json, and vocab.txt into your local directory. Make sure to place all of them into the same directory, mine is called "bert_model". 
 JDK 11 is needed to serve the model. Go ahead and install it from the Oracle downloads page. Now we are ready to set up TorcheServe.
 TorchServe is a model serving architecture for PyTorch models, go ahead and install that using pip. You can also use conda for the installation. We also need pytorch and transformers installed. 
